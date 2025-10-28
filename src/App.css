@@ -1,38 +1,80 @@
 .App {
-  text-align: center;
+  font-family: sans-serif;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+form {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #eee;
+  background-color: #f9f9f9;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Responsive grid */
+  gap: 10px; /* Espacio entre campos */
+  align-items: center; /* Alinea verticalmente */
+}
+
+input,
+select {
+  padding: 8px;
+  margin-bottom: 5px; /* Pequeño espacio debajo */
+  box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+}
+
+/* Botón del formulario ocupa toda una columna */
+.form-grid button {
+  grid-column: 1 / -1; /* Ocupa desde la primera hasta la última columna */
+  padding: 10px;
+  background-color: #4caf50;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.form-grid button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1,
+h2 {
+  color: #333;
 }
