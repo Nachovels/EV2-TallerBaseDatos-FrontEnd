@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css"; // Importaremos un CSS básico luego
 
 // URL base de tu API (¡Asegúrate que tu backend esté corriendo!)
-const API_URL = "http://ec2-98-81-150-1.compute-1.amazonaws.com:8080/api";
+const API_URL = "http://localhost:8080/api";
 
 function App() {
   // --- Estados para guardar los datos ---
@@ -386,12 +386,7 @@ function App() {
           />
           <button type="submit">Actualizar Sueldo</button>
         </form>
-        <p>
-          <em>
-            (Prueba a ingresar un sueldo menor al actual para ver el error del
-            Trigger)
-          </em>
-        </p>
+
         {/* Tabla de empleados - NUEVA TABLA */}
         <table>
           <thead>
